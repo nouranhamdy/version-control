@@ -1,0 +1,6 @@
+sudo yum -y install git-all
+git config --global user.name "nouranhamdy"
+git config --global user.email nouranhamdy4555@gmail.com 
+mkdir version-control
+cd version-control/
+git init 
