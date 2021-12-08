@@ -1,0 +1,25 @@
+sudo yum -y install git-all
+git config --global user.name "nouranhamdy"
+git config --global user.email nouranhamdy4555@gmail.com 
+mkdir version-control
+cd version-control/
+git init
+vim vc-lab1.txt
+git add vc-lab1.txt 
+git commit -m "lab commands"
+cd ~
+ssh-genkey -t rsa -b 4096 -C "nouranhamdy4555@gmail.com"
+cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCq6wvX5vUizQ0lj+7tw9sMK3NTXntGDljFUwWE5BfQRIB6wq8gjjN0CHrHo/vHjRX91sYwdGZIZXi7CgdOj7PdvdXodSc1rotbMDTK4HaDFwrB9i9/qYQ+EY9japrGhyjiB142EOOO2C4S6VnvADjvVoA5P2CFJzmlMPZxRLOS8B4it5UFoI2tddr9hLTQNsfwC9IHpykwhIRIPleEEHoeCC1fHLPku9+/xRwStEAu6gttdAffqH2Kw5qFFVse2ypQqQTP3/rhn/s/kEfTZK2tIO9+FyiNKMvdNgORK6nu+ChioullYBBMdLwWbt18pnSw2TF8cH+oKC9FhoGi3g7GaMfYhzaLCgKMPa6uh4LaxV/E9orPvvbvgp9kVhDtWv1ejB75AmivGw30xIiwcj0GdGA+w3wmc4eaFDOZ89qPOVJq6chuyv6EO9BQoYiHqv3hnJK3StN0HZKfndSUQI7nTxyOL6pnZtxbfIYHCG0dNLWLw2Luggz1DVMBXiA3MKMMWjY9KIJtOjINVaCeHEDgzYIgpXG5+usx1Fe/lZ2amOYqgTgfiDXpzHRcyQ8YoE3BSb8I7+HUhsBh6tlXONQzlPmMuHmbLmfaL/mGTrpa5Q52QoLmG/7rVFezjYLwqEfX766550JjdHIZ1bmoDm+Oe8+kxUwllpARtEj6DcRAFw== nouranhamdy4555@gmail.com
+git remote add origin git@github.com:nouranhamdy/version-control.git
+git push origin master
+git add vc-lab1.txt
+git commit -m "latest update"
+git push origin master
+mv vc-lab1.txt Nouran-Hamdy.txt
+git add Nouran-Hamdy.txt
+git commit -m "rename file"
+git push origin master
+
+
+
